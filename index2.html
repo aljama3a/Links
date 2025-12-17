@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Awesome Links</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Animated gradient background */
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBg 15s ease infinite;
+    }
+
+    @keyframes gradientBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 30px 40px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 12px 0;
+    }
+
+    /* Link as a button */
+    a {
+      position: relative;
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    /* Shiny hover effect */
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.4s ease;
+    }
+
+    a:hover::before {
+      left: 140%;
+    }
+
+    a:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      border-color: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.18);
+    }
+
+    a:active {
+      transform: translateY(0) scale(0.99);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Awesome Links</h1>
+    <ul>
+      <li><a href="https://example1.com" target="_blank">Tool 1</a></li>
+      <li><a href="https://example2.com" target="_blank">Tool 2</a></li>
+      <li><a href="https://example3.com" target="_blank">Tool 3</a></li>
+    </ul>
+  </div>
+</body>
+</html>
